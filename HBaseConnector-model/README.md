@@ -1,0 +1,1 @@
+# HBaseConnector Model Module
