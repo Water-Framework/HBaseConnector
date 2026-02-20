@@ -6,7 +6,7 @@ Feature: Check HBaseConnector Rest API module status response
 
     Given header Content-Type = 'application/json'
     And header Accept = 'application/json'
-    Given url serviceBaseUrl + '/water/hbaseconnectors/module/status'
+    Given url serviceBaseUrl + '/water/hbase/module/status'
     When method GET
     Then status 200
     And match response contains 'HBaseConnector Module works!'

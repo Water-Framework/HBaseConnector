@@ -28,20 +28,20 @@ public class HBaseConnectorRestControllerImpl implements HBaseConnectorRestApi {
 
     @Override
     public String checkConnection() throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/checkConnection");
+        LOG.debug("Invoking /hbase/checkConnection");
         hbaseConnectorApi.checkConnection();
         return "Connection OK";
     }
 
     @Override
     public Response checkModuleWorking() {
-        LOG.debug("Invoking /hbaseconnectors/module/status");
+        LOG.debug("Invoking /hbase/module/status");
         return Response.ok("HBaseConnector Module works!").build();
     }
 
     @Override
     public void createTable(String tableName, String columnFamilies) throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables - Creating table {}", tableName);
+        LOG.debug("Invoking /hbase/tables - Creating table {}", tableName);
         List<String> families = Arrays.asList(columnFamilies.split(","));
         hbaseConnectorApi.createTable(tableName, families);
     }
@@ -49,31 +49,31 @@ public class HBaseConnectorRestControllerImpl implements HBaseConnectorRestApi {
     @Override
     public void insertData(String tableName, String rowKey, String columnFamily, String column, String cellValue)
         throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables - Inserting into table {}", tableName);
+        LOG.debug("Invoking /hbase/tables - Inserting into table {}", tableName);
         hbaseConnectorApi.insertData(tableName, rowKey, columnFamily, column, cellValue);
     }
 
     @Override
     public void deleteData(String tableName, String rowKey) throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables/rows - Deleting from table {}", tableName);
+        LOG.debug("Invoking /hbase/tables/rows - Deleting from table {}", tableName);
         hbaseConnectorApi.deleteData(tableName, rowKey);
     }
 
     @Override
     public void enableTable(String tableName) throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables/{}/enable - Enabling table", tableName);
+        LOG.debug("Invoking /hbase/tables/{}/enable - Enabling table", tableName);
         hbaseConnectorApi.enableTable(tableName);
     }
 
     @Override
     public void disableTable(String tableName) throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables/{}/disable - Disabling table", tableName);
+        LOG.debug("Invoking /hbase/tables/{}/disable - Disabling table", tableName);
         hbaseConnectorApi.disableTable(tableName);
     }
 
     @Override
     public void dropTable(String tableName) throws IOException {
-        LOG.debug("Invoking /hbaseconnectors/tables/{} - Dropping table", tableName);
+        LOG.debug("Invoking /hbase/tables/{} - Dropping table", tableName);
         hbaseConnectorApi.dropTable(tableName);
     }
 }

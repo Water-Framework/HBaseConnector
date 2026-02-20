@@ -12,7 +12,7 @@
     "projectVersion": "project.waterVersion",
     "projectTechnology": "water",
     "hasRestServices": true,
-    "restContextRoot": "/hbaseconnectors",
+    "restContextRoot": "/hbase",
     "hasModel": false,
     "modelName": "HBaseConnector",
     "modelNameLowerCase": "hBaseConnector",
