@@ -18,8 +18,6 @@
   <feature name="hbase-connector" version="3.0.0" description="Water HBase Connector microservice integration">
     <!-- HBase Connector API -->
     <bundle>mvn:it.water.connectors.hbase/HBaseConnector-api/3.0.0</bundle>
-    <!-- HBase Connector Model -->
-    <bundle>mvn:it.water.connectors.hbase/HBaseConnector-model/3.0.0</bundle>
     <!-- HBase Connector Service (OSGi bundle) -->
     <bundle start-level="85">mvn:it.water.connectors.hbase/HBaseConnector-service/3.0.0</bundle>
     <!-- HBase Client library -->

@@ -1,11 +1,11 @@
 meta {
-  name: Delete HBaseConnector entity
+  name: Drop HBase table
   type: http
   seq: 4
 }
 
 delete {
-  url: http://localhost:8080/water/hbaseconnectors/1
-  body: json
+  url: http://localhost:8080/water/hbaseconnectors/tables/test_table
+  body: none
   auth: none
 }
