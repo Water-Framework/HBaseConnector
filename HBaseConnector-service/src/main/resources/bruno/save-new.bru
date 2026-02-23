@@ -1,0 +1,11 @@
+meta {
+  name: Create HBase table
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/water/hbase/tables?tableName=test_table&columnFamilies=cf1,cf2
+  body: none
+  auth: none
+}

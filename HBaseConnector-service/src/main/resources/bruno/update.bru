@@ -1,0 +1,11 @@
+meta {
+  name: Enable HBase table
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/water/hbase/tables/test_table/enable
+  body: none
+  auth: none
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Drop HBase table
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8080/water/hbase/tables/test_table
+  body: none
+  auth: none
+}
